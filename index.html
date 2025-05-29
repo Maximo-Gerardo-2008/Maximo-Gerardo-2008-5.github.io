@@ -1,0 +1,102 @@
+<!<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	
+	<title>PROFES CB206</title>
+</head>
+<body background="img/fondo.jpeg" class="background">
+	<center>
+	     <font size="5" face="courier" color="#08C5BA">
+	     <h1>PROFES DEL CBTIS 206</h1>
+	  	 <div class="app">
+	    	<hr color=black>  
+	  		<p>
+				<label for="nombre">Nombres:</label><br>
+					<select name="instrumento" id="varFV" size="1" onchange="FV()">
+					  <option value="0" selected>Seleccionar</option>
+					  <option value="1">Alondra Zavala</option>
+					  <option value="2">Soto Navarrez</option>
+					  <option value="3">Rogelio Adrian</option>
+					  <option value="4">Diana Liliam</option>
+					  <option value="5">Franscisco Exay</option>
+					  
+					</select>
+				<br>
+			<p>
+			
+			<a id="ref1"><img id="img" width="350" height="300"></a>
+			<p id="nombreSeleccionado"></p>
+
+		<style type="text/css">
+		    .background {
+		      background-size: cover;
+		    }
+		    #nombreSeleccionado {
+		      font-size: 18px;
+		      font-family: Arial, sans-serif;
+		      color: white;
+		      margin-top: 10px;
+		    }
+
+
+		</style>
+
+		<script type="text/javascript">
+    function FV() {
+      const select = document.getElementById("varFV");
+      const value = parseInt(select.value);
+      const nombre = select.options[select.selectedIndex].text;
+      const img = document.getElementById("img");
+      const nombreTexto = document.getElementById("nombreSeleccionado");
+
+      
+      switch (value) {
+        case 1:
+          img.src = "img/imagen1.jpeg";
+          break;
+        case 2:
+          img.src = "img/ingles.jpeg";
+          break;
+        case 3:
+          img.src = "img/ciencias.png";
+          break;
+        case 4:
+          img.src = "img/quimica.jpeg";
+          break;
+        case 5:
+          img.src = "img/matematicas.jpeg";
+          break;
+        default:
+          img.src = "img/blanco.jpg";
+      }
+
+      
+      if (value === 0) {
+        nombreTexto.innerText = "";
+      } if (value === 1) {
+        nombreTexto.innerText = "Seleccionaste: " + nombre + " Profesora de programación ";
+      }
+      if (value === 2) {
+        nombreTexto.innerText = "Seleccionaste: " + nombre + " Profe de ingles ";
+      }
+      if (value === 3) {
+        nombreTexto.innerText = "Seleccionaste: " + nombre + " Profe de ciencias sociales ";
+      }
+      if (value === 4) {
+        nombreTexto.innerText = "Seleccionaste: " + nombre + " Profesora de qumica ";
+      }
+      if (value === 5) {
+        nombreTexto.innerText = "Seleccionaste: " + nombre + " Profe de matematicas ";
+      }
+
+    }
+  </script>
+		<h4 align="center"><b>Mtra. Alondra Zavala - CBTIS 206 - 2025</h4></p>
+	</center>
+	</div>
+
+
+
+</body>
+</html>
